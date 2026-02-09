@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "jarvis",
+  "version": "0.1.0",
+  "description": "J.A.R.V.I.S - Just A Rather Very Intelligent System",
+  "dependencies": [
+    "nlohmann-json",
+    "yaml-cpp",
+    {
+      "name": "cpp-httplib",
+      "features": ["openssl"]
+    },
+    "opencv4",
+    "dlib",
+    "miniaudio"
+  ]
+}

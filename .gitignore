@@ -1,0 +1,57 @@
+# Build outputs
+build/
+out/
+cmake-build-*/
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.a
+*.lib
+*.exp
+*.pdb
+*.ilk
+.vs/
+.vscode/
+x64/
+x86/
+
+# vcpkg
+vcpkg_installed/
+
+# Models (downloaded, not committed)
+models/whisper/
+models/llm/
+models/tts/
+models/face/
+!models/.gitkeep
+
+# Face database (user-specific)
+assets/face_db/*.dat
+!assets/face_db/.gitkeep
+
+# User-provided audio (private - do not commit)
+*.mp3
+assets/audio/*
+!assets/audio/.gitkeep
+
+# IDE
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+
+# Environment / secrets (never commit API keys or tokens)
+.env
+.env.local
+.env.*.local
+*.key
+config/local.yaml
+config/secrets.yaml
+**/secrets*

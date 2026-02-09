@@ -1,0 +1,41 @@
+# J.A.R.V.I.S. Runtime Configuration
+# When running from build dir, set root to ".." to use project-root models.
+
+paths:
+  root: ".."
+  models_dir: "models"
+  assets_dir: "assets"
+  face_db_dir: "assets/face_db"
+
+models:
+  whisper: "whisper/ggml-base.en.bin"
+  llm: "llm/qwen2.5-7b-instruct-q4_k_m.gguf"
+  tts: "tts/en_GB-alan-medium.onnx"
+  face_landmarks: "face/shape_predictor_68_face_landmarks.dat"
+
+audio:
+  welcome_track: "assets/audio/should_i_stay.mp3"
+  sample_rate: 16000
+  vad_threshold: 0.5
+  mic_device_index: -1  # -1 = default
+
+camera:
+  device_index: 0
+  width: 640
+  height: 480
+  fps: 30
+
+face_recognition:
+  match_threshold: 0.6
+  enrollment_samples: 5
+
+llm:
+  cloud_api_key_env: "OPENAI_API_KEY"
+  local_context_size: 4096
+  cloud_model: "gpt-4o-mini"
+  route_to_cloud_tokens: 2000
+
+personality:
+  user_name: "sir"
+  quiet_mode_keywords: ["stand down", "quiet", "sleep", "go to sleep"]
+  wake_keywords: ["jarvis", "wake up", "hey jarvis"]
